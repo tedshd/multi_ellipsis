@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Ted Shiu (tedshd@gmail.com)
+ * @date    2016-04-07 09:19:04
+ */
+
+@import "compass";
+
+$gradient_light: rgba(255,255,255,.3);
+$gradient_dark: rgba(255,255,255,1);
+$gradient_light_hex: '#00ffffff';
+$gradient_dark_hex: '#ffffff';
+
+.multi_ellipsis {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    line-height: 1.5;
+}
+.multi_ellipsis:after {
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 2em;
+    text-align: right;
+    @include background-image(linear-gradient(to right, $gradient_light 0%, $gradient_dark 70%, $gradient_dark 100%));
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */
+    // background: -moz-linear-gradient(left, $gradient_light 0%,$gradient_dark 70%, $gradient_dark 100%); /* FF3.6-15 */
+    // background: -webkit-linear-gradient(left, $gradient_light 0%,$gradient_dark 70%,$gradient_dark 100%); /* Chrome10-25,Safari5.1-6 */
+    // background: linear-gradient(to right, $gradient_light 0%,$gradient_dark 70%,$gradient_dark 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$gradient_light_hex, endColorstr=$gradient_dark_hex,GradientType=1 ); /* IE6-9 */
+}

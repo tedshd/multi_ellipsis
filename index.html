@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Multi ellipsis</title>
+<link href="css/multi_ellipsis.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.12.3.js" integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc=" crossorigin="anonymous"></script>
+<style>
+    h1, h2 {
+        width: 320px;
+        word-break: break-all;
+    }
+</style>
+</head>
+<body>
+    <h1 class="">
+        <span id="demo">qpj!^*@#lgrABWMY j是gyqpj%&lgrTWEY, abgxyz 這是測試 qpjblgrABWMY</span>
+    </h1>
+    <h1 class="">
+        <span>qpj!^*@#lgrYjgyqpj%&lgrTWEY, abgxyz 這 qpjbY</span>
+    </h1>
+    <h1 class="">
+        <span>3，網路封鎖失靈，彈奏翻譜目不轉睛，桃機多班航班延遲及轉降，北捷破50億人次，持續濃霧籠罩，警查賭場，新人娶諧音2014520，全民大追緝，明凌晨起油價漲，組合Super</span>
+    </h1>
+    <h2 class="">
+        <span>3，網路封鎖失靈，彈奏翻譜目不轉睛，桃機多班航班延遲及轉降，北捷破50億人次，持續濃霧籠罩，警查賭場，新人娶諧音2014520，全民大追緝，明凌晨起油價漲，組合Super</span>
+    </h2>
+    <h2 class="">
+        <span id="demo">太好了，我都洗漱完毕开水烧好在喝速溶咖啡了，帮我泡咖啡啦👼咖啡弄劍潭店將於3/7(三)試營運，地震發生時，倘若你剛剛跟一個男朋友分手不久，對著我笑時我感到很快樂；</span>
+    </h2>
+</body>
+<script src="js/multi_ellipsis.js"></script>
+<script>
+setEllipsis(document.querySelectorAll('h1 span'), 2);
+setEllipsis(document.querySelectorAll('h2 span'), 2);
+// setEllipsis($('h1 span'), 2);
+setEllipsis($('#demo'), 2);
+</script>
+</html>

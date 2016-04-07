@@ -1,0 +1,27 @@
+/**
+ *
+ * @authors Ted Shiu (tedshd@gmail.com)
+ * @date    2016-04-07 09:19:04
+ */
+.multi_ellipsis {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.multi_ellipsis:after {
+  content: "...";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2em;
+  text-align: right;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjMiLz48c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0.3)), color-stop(70%, #ffffff), color-stop(100%, #ffffff));
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.3) 0%, #ffffff 70%, #ffffff 100%);
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.3) 0%, #ffffff 70%, #ffffff 100%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, #ffffff 70%, #ffffff 100%);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */
+}
