@@ -36,14 +36,15 @@ function setEllipsis(domElement, lineCount) {
         }
     }
     function fontSize(dom) {
-        var size = getStyle(document.body).fontSize;
-        console.log(size);
-        if (size.search('pt') !== -1) {
+        var baseFontSize = getStyle(document.body).fontSize,
+            size;
+        console.log(baseFontSize);
+        if (baseFontSize.search('pt') !== -1) {
             size = parseFloat(size.replace('pt', ''));
             size = (size * 3) / 4; // pt to px
             size = parseFloat(dom.fontSize) * size * 1.5;
         }
-        if (size.search('px') !== -1) {
+        if (baseFontSize.search('px') !== -1) {
             size = parseFloat(dom.fontSize.replace('px', '')) * 1.5;
         }
         return size;
