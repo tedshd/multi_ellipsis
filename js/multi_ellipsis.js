@@ -40,7 +40,7 @@ function setEllipsis(domElement, lineCount) {
             size;
         console.log(baseFontSize);
         if (baseFontSize.search('pt') !== -1) {
-            size = parseFloat(size.replace('pt', ''));
+            size = parseFloat(baseFontSize.replace('pt', ''));
             size = (size * 3) / 4; // pt to px
             size = parseFloat(dom.fontSize) * size * 1.5;
         }
