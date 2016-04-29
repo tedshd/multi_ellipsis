@@ -42,10 +42,10 @@ function setEllipsis(domElement, lineCount) {
         if (baseFontSize.search('pt') !== -1) {
             size = parseFloat(baseFontSize.replace('pt', ''));
             size = (size * 3) / 4; // pt to px
-            size = parseFloat(dom.fontSize) * size;
+            size = parseFloat(dom.fontSize) * size * 1.5;
         }
         if (baseFontSize.search('px') !== -1) {
-            size = parseFloat(dom.fontSize.replace('px', ''));
+            size = parseFloat(dom.fontSize.replace('px', '')) * 1.5;
         }
         return size;
     }
