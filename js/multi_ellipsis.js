@@ -42,11 +42,11 @@ function setEllipsis(domElement, lineCount) {
         domContainer.style.lineHeight = 1.5;
         var style = getStyle(domElement[i]),
             styleParent = getStyle(domContainer),
-            lh = parseInt(styleParent.fontSize, 10),
+            lh = parseInt(styleParent.fontSize.replace('px', ''), 10),
             h = parseInt(domElement[i].offsetHeight, 10);
         domContainer.style.maxHeight = 1.5*lineCount + 'em';
+        console.log(styleParent.fontSize);
         console.log('lh-', lh);
-        console.log(domElement[i]);
         console.log('h-', domElement[i].offsetHeight);
         if (h > (lh * lineCount)) {
             if (!hasClass(domContainer, 'multi_ellipsis')) {
