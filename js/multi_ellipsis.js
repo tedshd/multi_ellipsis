@@ -37,7 +37,7 @@ function setEllipsis(domElement, lineCount) {
     }
     for (var i = 0; i < domElement.length; i++) {
         var domContainer = domElement[i].parentNode;
-        domElement[i].style.display = 'inline-block';
+        domElement[i].style.display = 'block';
         domContainer.style.display = 'block';
         domContainer.style.lineHeight = 1.5;
         var style = getStyle(domElement[i]),
