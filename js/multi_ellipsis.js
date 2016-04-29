@@ -35,6 +35,19 @@ function setEllipsis(domElement, lineCount) {
             return (dom.className.search(className) === -1) ? false: true;
         }
     }
+    function fontSize(dom) {
+        var size = dom.fontSize;
+        console.log(size);
+        if (size.search('pt') !== -1) {
+            size = parseFloat(size.replace('pt', ''));
+            size = (size * 3) / 4; // pt to px
+            size = size * 1.5;
+        }
+        if (size.search('px') !== -1) {
+            size = parseFloat(size.replace('px', '')) * 1.5;
+        }
+        return size;
+    }
     for (var i = 0; i < domElement.length; i++) {
         var domContainer = domElement[i].parentNode;
         domElement[i].style.display = 'inline-block';
@@ -42,7 +55,7 @@ function setEllipsis(domElement, lineCount) {
         domContainer.style.lineHeight = 1.5;
         var style = getStyle(domElement[i]),
             styleParent = getStyle(domContainer),
-            lh = parseInt(styleParent.fontSize.replace('px', ''), 10),
+            lh = fontSize(styleParent),
             h = parseInt(domElement[i].offsetHeight, 10);
         domContainer.style.maxHeight = 1.5*lineCount + 'em';
         console.log(styleParent.fontSize);
